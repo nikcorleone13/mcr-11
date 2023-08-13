@@ -12,7 +12,12 @@ const Watchlist = () => {
   const [showWish, setShowWish] = useState([...wishlist]);
 
   useEffect(() => {
-    setShowWish(localStorage.getItem('watch')|| [...wishlist]);
+    localStorage.setItem("watch",wishlist);
+    {
+      !showWish &&
+      setShowWish(localStorage.getItem('watch'));
+
+    }
 
   }, [wishlist]);
 
@@ -34,7 +39,7 @@ const Watchlist = () => {
             <div className="">
               <p className="text-6xl font-semibold text-center pt-4">Movies in Watch Later</p>
               <div className="w-[100%] flex justify-start flex-wrap gap-12 py-12 px-8">
-                {[...showWish].map((item) => {
+                {[...wishlist].map((item) => {
                   return (
                     <div className="shadow-md my-4 border-2 w-[25%] h-[400px] flex flex-col rounded-md justify-between pb-2">
                     <div

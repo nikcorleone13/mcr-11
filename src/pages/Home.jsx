@@ -232,7 +232,7 @@ const Home = () => {
                   <option value="">Rating</option>
                   <option value="9">9.0+</option>
                   <option value="8">8.0+</option>
-                  <option value="Toys">7.0+</option>
+                  <option value="7">7.0+</option>
                 </select>
               </div>
 
